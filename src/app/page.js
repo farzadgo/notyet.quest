@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.center}>
-        <p>website in progress</p>
+        <p> website in progress </p>
       </div>
     </main>
   )

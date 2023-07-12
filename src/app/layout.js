@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'plystation',
-  description: 'mine locale',
+  description: 'MINE locale',
 }
 
 export default function RootLayout({ children }) {
