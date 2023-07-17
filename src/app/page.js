@@ -13,28 +13,30 @@ export default function Home() {
   }
 
   useEffect(() => {
+    const handleVideo = () => {
+      console.log('videoHandled');
+      videoRef.current.style.opacity = '1';
+    }
+
+    videoRef.current.addEventListener('canplay', handleVideo);
+
     let startFrom = Math.floor(Math.random() * 36);
     console.log(`startFrom: ${startFrom}`);
     videoRef.current.src = 'https://cloud.disorient.xyz/s/qANZQ7o8egMzZYd/download/UMZU_plystation-MINE_v01.m4v';
     videoRef.current.currentTime = startFrom;
-    // console.log(videoRef.current);
-    if (isElement(videoRef.current)) {
-      setTimeout(() => {
-        videoRef.current.style.opacity = '1';
-      }, 100);
-    }
-  
+
     return () => {
+      videoRef.current.removeEventListener('canplay', handleVideo);
     }
   }, []);
 
   return (
     <main className={styles.main}>
-      <div className={styles.center}>
+      <div className={styles.messageContainer}>
         <p> website in progress </p>
-        <div className={styles.videoContainer}>
-          <video ref={videoRef} width="100%" height="100%" autoPlay loop muted />
-        </div>
+      </div>
+      <div className={styles.videoContainer}>
+        <video ref={videoRef} width="100%" height="100%" autoPlay loop muted />
       </div>
     </main>
   )
