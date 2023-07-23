@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 // import Image from 'next/image';
 import styles from './page.module.css';
 
@@ -8,17 +8,27 @@ import styles from './page.module.css';
 export default function Home() {
   const videoRef = useRef(null);
 
-  function isElement(element) {
-    return element instanceof Element || element instanceof HTMLDocument;  
+  const [loaded, setLoaded] = useState(false);
+
+  // function isElement(element) {
+  //   return element instanceof Element || element instanceof HTMLDocument;
+  // }
+
+  const handlePlaying = () => {
+    console.log('video playing');
+    videoRef.current.style.opacity = '1';
+    setLoaded(true);
+  }
+
+  const handleLoading = () => {
+    console.log('video loading');
+    setLoaded(false);
   }
 
   useEffect(() => {
-    const handleVideo = () => {
-      console.log('videoHandled');
-      videoRef.current.style.opacity = '1';
-    }
-
-    videoRef.current.addEventListener('canplay', handleVideo);
+    // setLoaded(true);
+    videoRef.current.addEventListener('playing', handlePlaying);
+    videoRef.current.addEventListener('waiting', handleLoading);
 
     let startFrom = Math.floor(Math.random() * 36);
     console.log(`startFrom: ${startFrom}`);
@@ -26,18 +36,31 @@ export default function Home() {
     videoRef.current.currentTime = startFrom;
 
     return () => {
-      videoRef.current.removeEventListener('canplay', handleVideo);
+      videoRef.current.removeEventListener('playing', handlePlaying);
+      videoRef.current.removeEventListener('waiting', handleLoading);
     }
   }, []);
 
   return (
     <main className={styles.main}>
+
       <div className={styles.messageContainer}>
         <p> website in progress </p>
       </div>
+
+      {!loaded && <div className={styles.loader}></div>}
+      
       <div className={styles.videoContainer}>
-        <video ref={videoRef} width="100%" height="100%" autoPlay loop muted />
+        <video
+          ref={videoRef}
+          width="100%"
+          height="100%"
+          autoPlay
+          loop
+          muted
+        />
       </div>
+
     </main>
   )
 }
