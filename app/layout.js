@@ -4,8 +4,12 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'plystation',
-  description: 'MINE locale',
+  title: 'notyet.quest',
+  description: 'dexcription of the group comes here...',
+  openGraph: {
+    title: 'notyet.quest',
+    description: 'description of the group comes here...',
+  },
 }
 
 export default function RootLayout({ children }) {

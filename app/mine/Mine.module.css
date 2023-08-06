@@ -1,0 +1,32 @@
+.main {
+  font-family: var(--font-mono);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+}
+.main > * {
+  margin-bottom: 30px;
+}
+
+
+.headtitle {
+  font-size: 4em;
+}
+.headsubtitle {
+  margin-bottom: 2em;
+}
+.headbody p {
+  margin-bottom: 30px;
+}
+.headaddress {
+  margin-bottom: 150px;
+}
+.headaddress h3 {
+  margin-bottom: 0.6em;
+}
+
+
+.secondtitle {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}

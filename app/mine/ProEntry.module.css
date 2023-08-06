@@ -1,0 +1,32 @@
+.programentry {
+  margin-top: 90px;
+}
+
+.time {
+  display: flex;
+  border: 2px solid black;
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.type {
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.author {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.parts {
+  margin-bottom: 30px;
+}
+
+.description p {
+  margin-bottom: 30px;
+}

@@ -1,13 +1,11 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react';
-// import Image from 'next/image';
 import styles from './page.module.css';
 
 
-export default function Home() {
+export default function VideoBG() {
   const videoRef = useRef(null);
-
   const [loaded, setLoaded] = useState(false);
 
   // function isElement(element) {
@@ -27,8 +25,10 @@ export default function Home() {
 
   useEffect(() => {
     // setLoaded(true);
-    videoRef.current.addEventListener('playing', handlePlaying);
-    videoRef.current.addEventListener('waiting', handleLoading);
+    if (videoRef.current) {
+      videoRef.current.addEventListener('playing', handlePlaying);
+      videoRef.current.addEventListener('waiting', handleLoading);
+    }
 
     let startFrom = Math.floor(Math.random() * 36);
     console.log(`startFrom: ${startFrom}`);
@@ -36,18 +36,15 @@ export default function Home() {
     videoRef.current.currentTime = startFrom;
 
     return () => {
-      videoRef.current.removeEventListener('playing', handlePlaying);
-      videoRef.current.removeEventListener('waiting', handleLoading);
+      if (videoRef.current) {
+        videoRef.current.removeEventListener('playing', handlePlaying);
+        videoRef.current.removeEventListener('waiting', handleLoading);
+      }
     }
   }, []);
 
   return (
-    <main className={styles.main}>
-
-      <div className={styles.messageContainer}>
-        <p> website in progress </p>
-      </div>
-
+    <>
       {!loaded && <div className={styles.loader}></div>}
       
       <div className={styles.videoContainer}>
@@ -60,7 +57,6 @@ export default function Home() {
           muted
         />
       </div>
-
-    </main>
+    </>
   )
 }
