@@ -66,8 +66,8 @@ const Mine = () => {
         <div className={styles.subsection}>
           <h3> Location </h3>
           <div>
-            <p >UMZU Pavillon at Haseatenmarkthof </p>
-            <p> Papenstraße 18 . 28219-Bremen </p>
+            <p> UMZU Pavillon, Markt am Hanseatehof </p>
+            <p> Papenstraße 6, 28195 Bremen </p>
           </div>
           <div className={styles.iconcontainer}>
             <Map />

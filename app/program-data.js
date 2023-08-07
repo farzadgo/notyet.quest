@@ -137,7 +137,7 @@ export const program = [
     date: 'Sunday 13.08',
     timespan: '16:00 - 18:00',
     type: 'Film Screening',
-    title: '',
+    title: '>>',
     author: '',
     parts: [],
     body: []
@@ -260,7 +260,7 @@ export const program = [
     date: 'Sunday 20.08',
     timespan: '16:00 - 18:00',
     type: 'Film Screening',
-    title: '',
+    title: '>>',
     author: '',
     parts: [],
     body: []
