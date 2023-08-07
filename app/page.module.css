@@ -5,28 +5,79 @@
   font-family: var(--font-mono);
   font-size: 1.2em;
   overflow-wrap: unset;
-  text-shadow: 1.5px 1.5px 0px #2f2f2f;
   /* min-height: 100vh;
   height: 100%; */
 }
 
-.messageContainer {
+.messageContainer,
+.contactContainer {
   position: absolute;
-  /* font-size: 3em; */
-  text-shadow: 2px 2px 0px #2f2f2f;
-  color: #eee;
+  display: flex;
+  flex-direction: column;
+  color: rgb(239, 239, 239);
+  text-shadow: 1.5px 1.5px 0px #2f2f2f;
 }
 
 .messageContainer a {
-  font-size: 3.6em;
+  font-size: 4em;
+  margin-bottom: 20px;
+  position: relative;
 }
 .messageContainer a::before {
   content: '>>';
+  position: absolute;
+  left: -130px;
+  transition: left 0.3s ease;
+}
+.messageContainer a:hover::before {
+  left: -110px;
 }
 
 .messageContainer p {
-  font-size: 2em;
+  font-size: 1.6em;
 }
+
+.contactContainer {
+  font-size: 1.3em;
+  bottom: 50px;
+  right: 70px;
+}
+.contactContainer > div {
+  margin-bottom: 30px;
+}
+.contactContainer > div > p:first-child::before,
+.contactContainer > div > a::before {
+  content: '>>';
+  position: absolute;
+  left: -40px;
+}
+
+
+/* --------- mobile --------- */
+
+@media (max-width: 699px) {
+  .messageContainer a {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  .messageContainer a::before {
+    left: -60px;
+  }
+  .messageContainer a:hover::before {
+    left: -55px;
+  }
+  .messageContainer p {
+    font-size: 1.2em;
+  }
+  .contactContainer {
+    font-size: 0.9em;
+    right: 92px;
+    bottom: 30px;
+  }
+}
+
+
+
 
 /* --------- videoBG --------- */
 
@@ -46,7 +97,7 @@
 
 .loader {
   position: absolute;
-  top: 70vh;
+  top: 65vh;
   width: 40px;
   height: 40px;
   border-radius: 50%;

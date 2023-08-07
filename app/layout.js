@@ -5,10 +5,10 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'notyet.quest',
-  description: 'dexcription of the group comes here...',
+  description: 'notyet.quest description...',
   openGraph: {
     title: 'notyet.quest',
-    description: 'description of the group comes here...',
+    description: 'notyet.quest description...',
   },
 }
 

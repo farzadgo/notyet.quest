@@ -146,7 +146,7 @@ export const program = [
     date: 'Monday 14.08',
     timespan: '16:00 - 18:00',
     type: 'Group reading session',
-    title: 'The Dialectics of Seeing',
+    title: '>> The Dialectics of Seeing',
     author: 'Susan Buck Morss on Walter Benjamin Arcades Project (1991)',
     parts: [],
     body: []

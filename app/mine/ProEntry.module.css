@@ -1,32 +1,50 @@
 .programentry {
-  margin-top: 90px;
+  margin-bottom: 120px;
 }
 
 .time {
-  display: flex;
-  border: 2px solid black;
-  padding: 10px;
-  width: 300px;
-  margin-bottom: 10px;
+  display: inline-flex;
+  border: 3px solid black;
+  padding: 10px 15px;
+  margin-bottom: 25px;
+}
+.time p:first-child {
+  margin-right: 25px;
 }
 
 .type {
   margin-bottom: 20px;
+  padding-left: 20px;
 }
 
 .title {
-  margin-bottom: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
 }
 
 .author {
-  font-size: 1.2em;
-  margin-bottom: 30px;
+  font-size: 1.3em;
+  margin-bottom: 40px;
+  padding-left: 73px;
+  font-weight: 400;
 }
 
 .parts {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .description p {
   margin-bottom: 30px;
+  padding-left: 73px;
+}
+
+/* --------- mobile --------- */
+
+@media (max-width: 699px) {
+  .author {
+    padding-left: 63px;
+  }
+  .description p {
+    padding-left: 0;
+  }
 }

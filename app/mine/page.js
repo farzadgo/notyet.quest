@@ -6,7 +6,7 @@ export const metadata = {
   title: 'MINE',
   description: 'MINE project description...',
   openGraph: {
-    title: 'notyet.quest',
+    title: 'MINE',
     description: 'MINE project description...'
   }
 }
