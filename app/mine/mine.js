@@ -5,11 +5,27 @@ import { useState, useEffect } from 'react';
 import styles from './Mine.module.css';
 import { program } from '../program-data';
 import ProgramEntry from './programEntry';
-import { Map } from 'react-feather';
+import { Map, Sun, Moon } from 'react-feather';
 
 
 const Mine = () => {
   const [data, setData] = useState('');
+  const [toggleTheme, setToggleTheme] = useState(false);
+
+  const iconProps = {
+    color: toggleTheme ? '#eee' : 'black',
+    size: 36,
+    strokeWidth: 1.5
+  }
+
+  const themeColors = {
+    backColor: toggleTheme ? 'black' : 'white',
+    foreColor: toggleTheme ? '#eee' : 'black'
+  }
+
+  const handleTheme = () => {
+    setToggleTheme(prev => !prev);
+  }
 
   useEffect(() => {
     setData(program)
@@ -19,13 +35,26 @@ const Mine = () => {
   }, [])
 
   return (
-    <main className={styles.mine}>
+    <main
+      className={styles.mine}
+      style={{
+        background: themeColors.backColor,
+        color: themeColors.foreColor
+      }}>
       <section className={styles.section}>
         <h1 className={styles.minetitle}> MINE </h1>
+
+        <div className={styles.themeButContainer}>
+          <button className={styles.closebtn} onClick={handleTheme}>
+            {toggleTheme ? <Sun {...iconProps}/> : <Moon {...iconProps}/>}
+          </button>
+        </div>
+
         <div className={styles.subsection}>
           <h3> A CONDITION </h3>
-          <h3> INTERVENTION AT HANSEATENHOF UMZUPAVILION </h3>
+          <h3> INTERVENTION AT HANSEATENHOF UMZU PAVILION </h3>
         </div>
+
         <div className={styles.subsection}>
           <p>
             Profound transformations are reshaping our cities, altering
@@ -63,10 +92,11 @@ const Mine = () => {
             open to public interactions and participation.
           </p>
         </div>
+
         <div className={styles.subsection}>
           <h3> Location </h3>
           <div>
-            <p> UMZU Pavillon, Markt am Hanseatehof </p>
+            <p> UMZU Pavillon, Markt am Hanseatenhof </p>
             <p> Papenstraße 6, 28195 Bremen </p>
           </div>
           <div className={styles.iconcontainer}>
@@ -87,7 +117,7 @@ const Mine = () => {
 
       <section className={styles.section}>
         <h2 className={styles.secondtitle}>PROGRAM</h2>
-        {data && data.map((e, i) => <ProgramEntry content={e} key={i}/>)}
+        {data && data.map((e, i) => <ProgramEntry content={e} key={i} theme={themeColors}/>)}
       </section>
 
     </main>

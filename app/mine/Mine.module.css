@@ -10,6 +10,7 @@
   max-width: 1000px;
   padding: 40px 20px;
   font-size: 1.2em;
+  position: relative;
 }
 .subsection {
   margin-bottom: 60px;
@@ -35,6 +36,21 @@
   display: flex;
   align-items: center;
   gap: 15px;
+}
+.themeButContainer {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+}
+.themeButContainer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
 }
 
 /* --------- mobile --------- */

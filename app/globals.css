@@ -8,16 +8,17 @@
   --padding: 20px;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-rgb: 5, 5, 5;
   }
-  /* html { color-scheme: dark; } */
-}
+  html { color-scheme: dark; }
+} */
+
 ::selection {
   color: rgb(238, 238, 238);
-  background: rgb(5, 63, 97);
+  background: rgba(195, 0, 0, 0.6);
 }
 
 * {

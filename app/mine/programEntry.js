@@ -1,9 +1,7 @@
 import styles from './ProEntry.module.css'
 
 
-const ProgramEntry = ({ content }) => {
-
-  // console.log(content);
+const ProgramEntry = ({ content, theme }) => {
 
   const createMarkup = (string) => {
     return {__html: string}
@@ -11,7 +9,7 @@ const ProgramEntry = ({ content }) => {
 
   return (
    <div className={styles.programentry}>
-      <div className={styles.time}>
+      <div className={styles.time} style={{border: `3px solid ${theme.foreColor}`}}>
         <p> {content.date} </p>
         <p> {content.timespan} </p>
       </div>
