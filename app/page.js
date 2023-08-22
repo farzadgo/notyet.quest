@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import styles from './page.module.css';
 import VideoBG from './videobg';
+import Closing from './closing';
 
 // export const metadata = {
 //   icons: {
@@ -18,6 +19,8 @@ export default function Page() {
         <Link href="/mine"> MINE </Link>
         <p> 8-26. AUGUST 2023 </p>
       </div>
+
+      <Closing />
 
       <div className={styles.contactContainer}>
         <div>

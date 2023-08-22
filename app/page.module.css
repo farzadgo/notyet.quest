@@ -37,15 +37,16 @@
 
 .messageContainer p {
   font-size: 1.6em;
+  margin-bottom: 20px;
 }
 
 .contactContainer {
-  font-size: 1.3em;
+  font-size: 1.2em;
   bottom: 50px;
   right: 70px;
 }
 .contactContainer > div {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .contactContainer > div > p:first-child::before,
 .contactContainer > div > a::before {
@@ -99,7 +100,7 @@
 
 .loader {
   position: absolute;
-  top: 65vh;
+  top: 20vh;
   width: 40px;
   height: 40px;
   border-radius: 50%;
