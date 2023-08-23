@@ -1,4 +1,4 @@
-import styles from './ProEntry.module.css'
+import styles from './ProgramEntry.module.css';
 
 
 const ProgramEntry = ({ content, theme }) => {

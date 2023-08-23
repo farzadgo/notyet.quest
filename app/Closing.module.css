@@ -1,6 +1,5 @@
 .showFinBut {
-  position: absolute;
-  top: 60vh;
+  margin-bottom: 90px;
 }
 .hideFinBut {
   position: fixed;
@@ -25,7 +24,7 @@
 .finissage {
   position: absolute;
   color: #eee;
-  background-color: rgba(35, 35, 35, 0.88);
+  background-color: rgba(35, 35, 35, 0.9);
   padding: 40px;
   position: fixed;
   top: 10vh;

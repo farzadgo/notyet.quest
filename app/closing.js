@@ -14,7 +14,7 @@ export default function Closing() {
   const Finissage = () => {
     return (
       <div className={styles.finissage}>
-        <div className={styles.box}></div>
+        
         <button onClick={handleFinissage} className={styles.hideFinBut}> close </button>
 
           <section>
@@ -41,8 +41,7 @@ export default function Closing() {
               <li> Schirin <span>14 – 16</span> &nbsp;&nbsp;&nbsp; </li>
               <li> <i>_pause_</i> <span>16 – 16:30</span> </li>
               <li> ap0teke <span>16:30 – 17</span> &nbsp;&nbsp;&nbsp; </li>
-              <li> Pinkie <span>17 – 18:30</span> </li>
-              <li> Jashy <span>18:30 – 19</span> &nbsp;&nbsp;&nbsp; </li>
+              <li> pinkie <span>17 – 19</span> &nbsp;&nbsp;&nbsp; </li>
               <li> k445h <span>19 – 20:30</span> </li>
               <li> dis_orient <span>20:30 – 22</span> &nbsp;&nbsp;&nbsp; </li>
             </ul>
