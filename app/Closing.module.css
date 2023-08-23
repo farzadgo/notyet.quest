@@ -11,7 +11,7 @@
 .hideFinBut {
   background: none;
   border: 2px solid #eee;
-  padding: 7px 12px;
+  padding: 8px 14px;
   color: #ffffff;
   font-size: 1em;
   cursor: pointer;
@@ -40,7 +40,7 @@
   margin-bottom: 60px;
 }
 .finissage section h3 {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 .finissage section h3::before {
   content: '>>';
@@ -52,17 +52,25 @@
 .finissage section ul {
   list-style: none;
   font-weight: 200;
+  max-width: 300px;
 }
-
+.finissage section ul li {
+  width: 100%;
+  display: flex;
+}
+.finissage section ul span {
+  margin-left: auto;
+}
 
 /* --------- mobile --------- */
 
 @media (max-width: 699px) {
   .finissage {
-    left: 3vw;
     z-index: 2;
-    height: 88vh;
-    width: 94vw;
+    height: calc(100vh - 100px);
+    top: 80px;
+    width: calc(100vw - 40px);
+    left: 20px;
     overflow-y: auto;
     font-size: 0.9em;
     padding: 18px 24px;

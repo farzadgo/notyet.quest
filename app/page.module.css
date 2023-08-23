@@ -1,7 +1,7 @@
 .home {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   font-family: var(--font-mono);
   font-size: 1.2em;
   overflow-wrap: unset;
@@ -13,13 +13,14 @@
 .messageContainer,
 .contactContainer {
   position: absolute;
-  display: flex;
-  flex-direction: column;
   color: rgb(239, 239, 239);
   text-shadow: 1.5px 1.5px 0px #2f2f2f;
   z-index: 1;
 }
 
+.messageContainer {
+  top: 35vh;
+}
 .messageContainer a {
   font-size: 4em;
   margin-bottom: 20px;
@@ -34,7 +35,6 @@
 .messageContainer a:hover::before {
   left: -110px;
 }
-
 .messageContainer p {
   font-size: 1.6em;
   margin-bottom: 20px;
@@ -78,8 +78,6 @@
     bottom: 30px;
   }
 }
-
-
 
 
 /* --------- videoBG --------- */

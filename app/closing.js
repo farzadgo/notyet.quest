@@ -14,7 +14,7 @@ export default function Closing() {
   const Finissage = () => {
     return (
       <div className={styles.finissage}>
-
+        <div className={styles.box}></div>
         <button onClick={handleFinissage} className={styles.hideFinBut}> close </button>
 
           <section>
@@ -35,16 +35,16 @@ export default function Closing() {
             <p> August 26 – 8:00 AM - 10:00 PM <br/> UMZU Pavilion, Papenstr. 6 </p>
             <p> Through a blend of mixtapes, radio-show-alike, live performances, noise explorations, and DJ sets, we will redefine our perception of sound and together paint the city center with a symphony of possibilities. </p>
             <ul>
-              <li> abd <span>8 – 10</span></li>
-              <li> gabb <span>10 – 12</span></li>
-              <li> HaiparHaipar <span>12 – 14</span></li>
-              <li> Schirin <span>14 – 16</span></li>
-              <li> <i>pause</i> <span>16 – 16:30</span></li>
-              <li> ap0teke <span>16:30 – 17</span></li>
-              <li> Lucas <span>17 – 18:30</span></li>
-              <li> Jashy <span>18:30 – 19</span></li>
-              <li> k445h <span>19 – 20:3</span></li>
-              <li> dis_orient <span>20:30 – 22</span></li>
+              <li> abd <span>8 – 10</span> &nbsp;&nbsp;&nbsp; </li>
+              <li> gabb <span>10 – 12</span> &nbsp;&nbsp;&nbsp; </li>
+              <li> HaiparHaipar <span>12 – 14</span> &nbsp;&nbsp;&nbsp; </li>
+              <li> Schirin <span>14 – 16</span> &nbsp;&nbsp;&nbsp; </li>
+              <li> <i>_pause_</i> <span>16 – 16:30</span> </li>
+              <li> ap0teke <span>16:30 – 17</span> &nbsp;&nbsp;&nbsp; </li>
+              <li> Pinkie <span>17 – 18:30</span> </li>
+              <li> Jashy <span>18:30 – 19</span> &nbsp;&nbsp;&nbsp; </li>
+              <li> k445h <span>19 – 20:30</span> </li>
+              <li> dis_orient <span>20:30 – 22</span> &nbsp;&nbsp;&nbsp; </li>
             </ul>
           </section>
 
