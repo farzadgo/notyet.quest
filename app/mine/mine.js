@@ -1,10 +1,9 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react';
-// import Image from 'next/image';
 import styles from './Mine.module.css';
 import { program } from './program-data';
-import ProgramEntry from './ProgramEntry';
+import ProgEntry from './ProgEntry';
 import { Map, Sun, Moon } from 'react-feather';
 import styled from 'styled-components';
 
@@ -197,7 +196,7 @@ const Mine = () => {
 
       <section className={styles.section}>
         <h2 className={styles.secondtitle}>PROGRAM</h2>
-        {data && data.map((e, i) => <ProgramEntry content={e} key={i} theme={themeColors}/>)}
+        {data && data.map((e, i) => <ProgEntry content={e} key={i} theme={themeColors}/>)}
       </section>
 
     </main>

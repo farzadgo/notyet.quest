@@ -1,7 +1,7 @@
-import styles from './ProgramEntry.module.css';
+import styles from './ProgEntry.module.css';
 
 
-const ProgramEntry = ({ content, theme }) => {
+const ProgEntry = ({ content, theme }) => {
 
   const createMarkup = (string) => {
     return {__html: string}
@@ -28,4 +28,4 @@ const ProgramEntry = ({ content, theme }) => {
   )
 }
 
-export default ProgramEntry
+export default ProgEntry
