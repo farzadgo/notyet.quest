@@ -1,5 +1,3 @@
-
-// import styles from './page.module.css';
 import Mine from "./mine";
 
 export const metadata = {

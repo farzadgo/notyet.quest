@@ -5,6 +5,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
   --padding: 20px;
+  --txt-color: #efefef;
+  --txt-shadow: 1.5px 1.5px 0px #2f2f2f;
 }
 
 /* @media (prefers-color-scheme: dark) {

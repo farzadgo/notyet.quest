@@ -1,11 +1,12 @@
 .home {
   display: flex;
-  justify-content: center;
+  /* justify-content: center;  */
   align-items: center;
   font-family: var(--font-mono);
   font-size: 1.2em;
   overflow-wrap: unset;
   height: 100vh;
+  /* min-height: 100vh; */
   flex-direction: column;
   /* position: absolute; */
   background: black;
@@ -13,7 +14,7 @@
 
 .messageContainer,
 .contactContainer {
-  color: rgb(239, 239, 239);
+  color: var(--txt-color);
   text-shadow: 1.5px 1.5px 0px #2f2f2f;
   z-index: 1;
 }
@@ -58,10 +59,40 @@
   left: -40px;
 }
 
+.footer {
+  height: 140px;
+  color: var(--txt-color);
+  text-shadow: var(--txt-shadow);
+  padding: 20px;
+  z-index: 1;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  /* justify-content: space-between; */
+  font-size: 0.8em;
+}
+
+.logoContainer img {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.programmedBy {
+  height: 100%;
+  display: flex;
+  align-items: end;
+  gap: 6px;
+  margin-left: auto;
+}
 
 /* --------- mobile --------- */
 
 @media (max-width: 699px) {
+  .messageContainer {
+    margin-bottom: 60px;
+  }
   .messageContainer a {
     font-size: 2em;
     margin-bottom: 10px;
@@ -77,6 +108,15 @@
   }
   .contactContainer {
     font-size: 0.9em;
+  }
+  .footer { /* important */
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+  .programmedBy {
+    font-size: 0.6em;
+    margin-top: 10px;
   }
 }
 
