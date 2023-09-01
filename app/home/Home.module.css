@@ -60,34 +60,34 @@
 }
 
 .footer {
+  display: flex;
+  position: absolute;
   height: 140px;
   padding: 20px;
   z-index: 1;
   width: 100vw;
-  position: absolute;
   bottom: 0;
-  display: flex;
-  /* justify-content: space-between; */
 }
-
 .logoContainer {
   display: flex;
+  height: 100%;
 }
 .logoContainer img {
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
   /* display: block; */
   align-self: flex-start;
 }
-
 .programmedBy {
   height: 100%;
   display: flex;
   align-items: end;
-  gap: 6px;
   margin-left: auto;
   color: var(--txt-color);
   font-size: 0.7em;
+}
+.programmedBy a {
+  margin-left: 0.5em;
 }
 
 /* --------- mobile --------- */
@@ -111,11 +111,16 @@
   }
   .contactContainer {
     font-size: 0.9em;
+    margin: inherit;
+    left: 0;
   }
   .footer { /* important */
     flex-direction: column;
     height: auto;
     padding: 10px;
+  }
+  .logoContainer img {
+    width: 100%;
   }
   .programmedBy {
     font-size: 0.6em;
