@@ -61,8 +61,6 @@
 
 .footer {
   height: 140px;
-  color: var(--txt-color);
-  text-shadow: var(--txt-shadow);
   padding: 20px;
   z-index: 1;
   width: 100vw;
@@ -70,13 +68,16 @@
   bottom: 0;
   display: flex;
   /* justify-content: space-between; */
-  font-size: 0.8em;
 }
 
+.logoContainer {
+  display: flex;
+}
 .logoContainer img {
   height: 100%;
   width: 100%;
-  display: block;
+  /* display: block; */
+  align-self: flex-start;
 }
 
 .programmedBy {
@@ -85,6 +86,8 @@
   align-items: end;
   gap: 6px;
   margin-left: auto;
+  color: var(--txt-color);
+  font-size: 0.7em;
 }
 
 /* --------- mobile --------- */
