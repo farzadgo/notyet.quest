@@ -1,5 +1,5 @@
 .showFinBut {
-  margin-bottom: 90px;
+  margin-bottom: 8vh;
 }
 .hideFinBut {
   position: fixed;
@@ -64,9 +64,6 @@
 /* --------- mobile --------- */
 
 @media (max-width: 699px) {
-  .showFinBut {
-    margin-bottom: 60px;
-  }
   .finissage {
     z-index: 2;
     height: calc(100vh - 110px);

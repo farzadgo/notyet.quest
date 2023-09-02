@@ -35,7 +35,7 @@ export default function Page() {
       <footer className={styles.footer}>
 
         <div className={styles.logoContainer}>
-          <img src="./MINE_mitFoerderzusatz_inverted.png" alt="funding logos"></img>
+          <img src="./MINE_mitFoerderzusatz_.png" alt="funding logos"></img>
         </div>
 
         <div className={styles.programmedBy}>
